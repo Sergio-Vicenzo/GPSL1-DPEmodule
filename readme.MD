@@ -22,7 +22,7 @@ DPE_module v1.0 would use the grid-based method, by which of establishing a set 
 
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE module to be integrated into it. 
 
-## Running the DPE_module v1.0-integrated SoftGNSS v3.0
+## Running the software
 The following code works the same way as the SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme ("readme - SoftGNSS.txt") and ppt ("GPS_L1_CA_SDR.pdf").
 
 ## DPE_module configuration
