@@ -1,9 +1,13 @@
 # Open-source GNSS Direct Position Estimation Plug-in Module for Two-Step Positioning SDRs
-DPE_module is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning MATLAB SDRs.
+DPE_modulev1.0 is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning MATLAB SDRs.
 
-## Authors
+Intelligent Positioning and Navigation Laboratory (IPNL) / PNT Signal Processing Lab
+The Hong Kong Polytechnic University
+
+## Author
+The code was written by Sergio Vicenzo.
 -------------------------------------------------------------------------------
-Sergio Vicenzo  
+Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. His research interests include GNSS urban navigation and positioning with direct position estimation.
 
 ## Description
 DPE_module is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning MATLAB SDRs. 
