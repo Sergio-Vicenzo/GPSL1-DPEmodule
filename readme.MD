@@ -1,5 +1,5 @@
 # DPE_module v1.0
-An open-source GNSS Direct Position Estimation Plug-in Module for Two-Step Positioning SDRs
+An open-source GNSS Direct Position Estimation Plug-in Module for Two-Step Positioning SDRs, integrated into SoftGNSS v3.0 by Borre et al. (2007)
 
 Intelligent Positioning and Navigation Laboratory (IPNL) / PNT Signal Processing Laboratory
 
@@ -16,7 +16,7 @@ Email: <seergio.vicenzo@connect.polyu.hk>
 ## Description
 DPE_module v1.0 is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning (2SP) MATLAB SDRs. 2SP information, namely tracking code phase, signal transmission time, receiver local time, satellite position from Least Squares, satellite clock bias, and Least Squares position solution, are used as input for the plug-in module. 
 
-Programmed in a user-friendly language, MATLAB, DPE_module v1.0 is aimed for better understanding and familiarity of a practical implementation of DPE. DPE_module v1.0 is integrated into the SoftGNSS MATLAB GPS L1 C/A 2SP SDR from Borre et al. (2007), which is based on Scalar Tracking Loop (STL). But integration of DPE_module v1.0 is not restricted to an STL-based receiver and can be integrated with other 2SP architectures, such as Vector Tracking Loop (VTL). Additionally, the GNSS constellation is not restricted to GPS L1 C/A, but is also integrable with SDRs working with other BPSK-modulated GNSS signals. 
+Programmed in a user-friendly language, MATLAB, DPE_module v1.0 is aimed for better understanding and familiarity of a practical implementation of DPE. In this repository, DPE_module v1.0 is integrated into the SoftGNSS MATLAB GPS L1 C/A 2SP SDR from Borre et al. (2007), which is based on Scalar Tracking Loop (STL). But integration of DPE_module v1.0 is not restricted to an STL-based receiver and can be integrated with other 2SP architectures, such as Vector Tracking Loop (VTL). Additionally, the GNSS constellation is not restricted to GPS L1 C/A, but is also integrable with SDRs working with other BPSK-modulated GNSS signals. 
 
 DPE_module v1.0 would use the grid-based method, by which of establishing a set of candidate position, velocity, and time (PVT) and obtaining the correlations from each satellite before finally non-coherently summing them up to obtain the candidate position with the highest signal correlation, which would be the PVT estimate of DPE. Position as well as receiver clock bias estimate from 2SP are also used as initialization for the grid of candidate position. 
 
