@@ -17,7 +17,7 @@ It is currently integrated into SoftGNSS v3.0 from the text: "A Software-Defined
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE module to be integrated into it. 
 
 ## How to use
-The following code works the same way as the SoftGNSSv3.0. Further information on using the code can be found in the original SoftGNSSv3.0 readme ("readme - SoftGNSS.txt") and ppt ("GPS_L1_CA_SDR.pdf").
+The following code works the same way as the SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme ("readme - SoftGNSS.txt") and ppt ("GPS_L1_CA_SDR.pdf").
 
 More details on the DPE module soon...
 
