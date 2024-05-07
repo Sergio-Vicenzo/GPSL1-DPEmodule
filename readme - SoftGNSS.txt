@@ -24,8 +24,6 @@ E-Mail: <daehee.won@colorado.edu>
 Hinckley
 E-Mail: <>
 
-
-
 Features
 -------------------------------------------------------------------------------
 * GNSS signal processing functions written in MATLAB
@@ -36,20 +34,9 @@ Features
     * Calculation of position
 * Support following signals
     * GPS L1 C/A
-    * GPS L2C (data + pilot)
-    * GPS L5C (data + pilot)
-    * Galileo E1 (data + pilot)
-    * Galileo E5a (data + pilot)
-    * Galileo E5b (data + pilot)
-    * GLONASS L1 C/A
-    * GLONASS L2 C/A
-    * Beidou Phase II B1
-    * Beidou Phase II B2
 * Support RF binary file for post processing
     * All the SDRs have been tested with IF signals collected by the NUT4NT 
 	sampler of the Ou Amungo company 
-
-	
 
 Directory and Files
 -------------------------------------------------------------------------------
@@ -77,13 +64,11 @@ Software Dependencies
   -- Convolutionally decode binary data using Viterbi algorithm: vitdec()
   -- Detect errors in input data using CRC: step() 
    
- 
 How to use
 -------------------------------------------------------------------------------
 * Step 1: Copy the IF data file into folder "IF_Data_Set";
-* Step 2: Configue parameters related to IF data file in function "initSettings.m";
-* Step 2: Start processing by runing function "init.m".
-
+* Step 2: Configure parameters related to IF data file in function "initSettings.m";
+* Step 2: Start processing by running function "init.m".
 
 Implementation details
 -------------------------------------------------------------------------------
@@ -91,59 +76,5 @@ See the summary PowerPoint documents for each SDRs:
     * GPS L1 C/A
 	   -- GPS_L1_CA_SDR.pptx
 	   
-Test signal and parameter configurations
--------------------------------------------------------------------------------
-    * GPS_L1_CA_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 14.58e6 Hz
-	   -- sampling Frequency: 53e6 Hz
-    * GPS_L2C_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 7.4e6 Hz
-	   -- sampling Frequency: 53e6 Hz	
-    * GPS_L5C_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 13.55e6 Hz
-	   -- sampling Frequency: 99.375e6 Hz
-    * Galileo_E1_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 14.58e6 Hz
-	   -- sampling Frequency: 53e6 Hz
-    * Galileo_E5a_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 13.55e6 Hz
-	   -- sampling Frequency: 99.375e6 Hz
-    * Galileo_E5b_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 17.14e6 Hz
-	   -- sampling Frequency: 99.375e6 Hz
-    * Glonass_L1_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- Frequency spacing: 562.5e3 Hz 
-	   -- IF: 11e6 Hz
-	   -- sampling Frequency: 53e6 Hz
-    * Glonass_L2_IF_signal.bin
-       -- dataType: schar
-	   -- Frequency spacing: 437.5e3 Hz
-	   -- fileType: 8 bit real samples
-	   -- IF: 12e6 Hz
-	   -- sampling Frequency: 53e6 Hz
-    * Beidou_B1_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 28.902e6 Hz
-	   -- sampling Frequency: 99.375e6 Hz
-    * Beidou_B2_IF_signal.bin
-       -- dataType: schar
-	   -- fileType: 8 bit real samples
-	   -- IF: 17.14e6 Hz
-	   -- sampling Frequency: 99.375e6 Hz
 
 	   
