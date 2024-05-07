@@ -23,27 +23,27 @@ DPE_module v1.0 would use the grid-based method, by which of establishing a set 
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE module to be integrated into it. 
 
 ## Running the software
-The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using the software follows the same steps as running a regular SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme ("readme - SoftGNSS.txt") and ppt ("GPS_L1_CA_SDR.pdf").
+The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using the software follows the same steps as running a regular SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
 
 ## DPE_module configuration
-The grid of candidate PVTs are by default configured to have 1-meter spacing between them. The grid spacing for the latitude-longitude-height estimation can be changed from initSettings.m under the parameter settings.candPVT_spacing. Yet, the spacing between the clock bias candidates is fixed at 1 meter. 
+The grid of candidate PVTs are by default configured to have 1-meter spacing between them. The grid spacing for the latitude-longitude-height estimation can be changed from initSettings.m under the parameter `settings.candPVT_spacing`. Yet, the spacing between the clock bias candidates is fixed at 1 meter. 
 
 The PVT search space is set to have a span of ±30 meters for the latitude and longitude search space, ±50 meters for the height search space, and ±20 meters for clock bias by default. The candidate PVTs would be centred around 2SP PVT estimate for every epoch. 
-The search space span can be changed in initSettings.m under the parameters settings.DPE_latlong_span, settings.DPE_height_span, and settings.DPE_clkBias_span (the parameter names seem self-explanatory). 
+The search space span can be changed in `initSettings.m` under the parameters `settings.DPE_latlong_span`, `settings.DPE_height_span`, and `settings.DPE_clkBias_span` (the parameter names seem self-explanatory). 
 
-The non-coherent integration time for DPE can also be changed through initSettings.m under the parameter settings.DPE_nonCohInt to improve the performance of DPE as the satellite correlations would be more filtered. By default, the non-coherent integration time is set to 1 ms.
+The non-coherent integration time for DPE can also be changed through `initSettings.m` under the parameter `settings.DPE_nonCohInt` to improve the performance of DPE as the satellite correlations would be more filtered. By default, the non-coherent integration time is set to 1 ms.
 
-DPE_module v1.0 can also be set to output the correlograms, plotted at the estimated DPE height, for each of the satellite correlations as well as the resulting non-coherent sum over the navigation domain (parameter settings.DPE_plotCorrelogram).
+DPE_module v1.0 can also be set to output the correlograms, plotted at the estimated DPE height, for each of the satellite correlations as well as the resulting non-coherent sum over the navigation domain (parameter `settings.DPE_plotCorrelogram`).
 
-DPE_module v1.0 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as settings.gt_llh at initSettings.m.
+DPE_module v1.0 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as `settings.gt_llh` at `initSettings.m`.
 
 ## Dependencies
-DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB software has yet to be tested. D
+DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB software has yet to be tested.
 
-Dependencies of the underlying SoftGNSS v.30 can be found in its readme file `readme - SoftGNSS.txt`
+Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
 ## Disclaimer
-I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos and the "llh2xyz.m" script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license kept intact in each code file, in accordance to GNU General Public License. No changes were made to the "llh2xyz.m" script and its copyright statement is kept intact.
+I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos and the `llh2xyz.m` script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license kept intact in each code file, in accordance to GNU General Public License. No changes were made to the `llh2xyz.m` script and its copyright statement is kept intact.
 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
