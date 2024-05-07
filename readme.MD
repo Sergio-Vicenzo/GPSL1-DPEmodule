@@ -5,14 +5,6 @@ Intelligent Positioning and Navigation Laboratory (IPNL) / PNT Signal Processing
 
 The Hong Kong Polytechnic University
 
-## Author
-
-DPE_module v1.0 was written by Sergio Vicenzo.
-
-Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. He is supervised by Assistant Professor Bing Xu, and co-supervised by Associate Professor Li-Ta Hsu. His research interests include GNSS urban navigation and positioning with direct position estimation.
-
-Email: <seergio.vicenzo@connect.polyu.hk>
-
 ## Introduction
 DPE_module v1.0 is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning (2SP) MATLAB SDRs. 2SP information, namely tracking code phase, signal transmission time, receiver local time, satellite position from Least Squares, satellite clock bias, and Least Squares position solution, are used as input for the plug-in module. 
 
