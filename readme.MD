@@ -35,7 +35,9 @@ The proposed DPE can also be set to output the correlograms, plotted at the esti
 DPE_module v.10 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as settings.gt_llh at initSettings.m.
 
 ## Declaration
-I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos. All the changes made to the SoftGNSS v3.0 software have been labelled and the GNU license is kept intact each code file, in accordance to GNU General Public License.
+I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos and the "llh2xyz.m" script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and the GNU license is kept intact each code file, in accordance to GNU General Public License. No changes were made to the "llh2xyz.m" script and its copyright statement kept intact.
+
+No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
 ## References
 Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach. Birkhäuser, Boston, Massachusetts.
