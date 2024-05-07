@@ -12,7 +12,7 @@ The code was written by Sergio Vicenzo.
 Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. His research interests include GNSS urban navigation and positioning with direct position estimation.
 
 ## Description
-DPE_module is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning MATLAB SDRs. 
+DPE_modulev1.0 is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning MATLAB SDRs. 
 It is currently integrated into SoftGNSS v3.0 from the text: "A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach" by Borre, Akos, et.al.
 Parts of SoftGNSSv3.0 have been adapted to allow the DPE module to be integrated into it. 
 
