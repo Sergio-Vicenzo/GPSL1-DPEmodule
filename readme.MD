@@ -9,7 +9,7 @@ The Hong Kong Polytechnic University
 
 DPE_module v1.0 was written by Sergio Vicenzo.
 
-Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. His research interests include GNSS urban navigation and positioning with direct position estimation.
+Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. He is supervised by Assistant Professor Bing Xu, and co-supervised by Associate Professor Li-Ta Hsu. His research interests include GNSS urban navigation and positioning with direct position estimation.
 
 Email: <seergio.vicenzo@connect.polyu.hk>
 
