@@ -14,6 +14,7 @@ This repo and my entire research will not be possible without Prof Borre's EASY 
 
 I, Sergio Vicenzo, hereby do not claim ownership or responsibility to Prof. Borre's and Prof. Akos' SOftGNSS v.3.0. All the changes made to the SoftGNSS v3.0 software have been labelled in the code, in accordance to GNU General Public License.
 
+Note: This repository is still under development. I apologise if some information is incomplete or you encounter any problems...
 Last Updated: 7 May 2024
 
 	   
