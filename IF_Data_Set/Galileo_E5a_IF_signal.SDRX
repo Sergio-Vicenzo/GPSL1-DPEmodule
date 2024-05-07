@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="https://github.com/IonMetadataWorkingGroup">
+    
+	<lane id="SingleFreq">
+        
+		<bandsrc idband="E5a" idsrc="RoofAntenn"/>
+		
+
+
+		<system id="NT1065"/>
+        
+		<block>
+            <cycles>0</cycles>
+            <sizeheader>0</sizeheader>
+            <sizefooter>0</sizefooter>
+			<chunk>
+                <sizeword>1</sizeword>
+                <countwords>1</countwords>
+                <endian>Undefined</endian>
+                <padding>None</padding>
+                <wordshift>Right</wordshift>
+				<lump>
+									
+					<stream id="E5a">
+						<ratefactor>1</ratefactor>
+						<quantization>8</quantization>
+						<packedbits>8</packedbits>
+						<alignment>Undefined</alignment>
+						<shift>Undefined</shift>
+						<format>IF</format>
+						<encoding>BIN</encoding>
+						<band id="E5a"/>
+					</stream>
+					
+                </lump>
+            </chunk>		
+        </block>
+    </lane>
+	
+    <system id="NT1065">
+        <freqbase format="MHz">99.375</freqbase>
+        <equipment>NT1065</equipment>
+        <source id="RoofAntenna">
+            <type>UNKNOWN</type>
+            <polarization>UNKNOWN</polarization>
+            <idcluster>Antenna</idcluster>
+        </source>
+        <cluster id="Antenna"/>
+    </system>
+	
+	<band id="E5a">
+		<centerfreq format="GHz">1.17645</centerfreq>
+		<translatedfreq format="MHz">13.55</translatedfreq>
+		<delaybias format="sec">0.0</delaybias>
+		<bandwidth format="MHz">27.1</bandwidth>
+	</band>				
+
+	<session id="0">
+		<toa>2017-04-25T02:17:00Z</toa>
+		<position lat="40.00751188936323" lon="-105.261924456414" height="1625.7902"/>
+		<contact>Dennis M. Akos</contact>
+		<campaign>GNSS SDR test</campaign>
+		<scenario>Short signal collection</scenario>
+	</session>
+    
+	<file>
+		<url>Galileo_E5a_IF_signal.bin</url>
+		<timestamp>2017-04-25T02:17:00.0Z</timestamp>
+        <owner>CU</owner>
+        <lane id="SingleFreq"/>
+    </file>
+
+</metadata>

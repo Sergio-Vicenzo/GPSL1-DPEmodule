@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="https://github.com/IonMetadataWorkingGroup">
+    
+	<lane id="SingleFreq">
+        
+		<bandsrc idband="B2" idsrc="RoofAntenn"/>
+		
+
+
+		<system id="NT1065"/>
+        
+		<block>
+            <cycles>0</cycles>
+            <sizeheader>0</sizeheader>
+            <sizefooter>0</sizefooter>
+			<chunk>
+                <sizeword>1</sizeword>
+                <countwords>1</countwords>
+                <endian>Undefined</endian>
+                <padding>None</padding>
+                <wordshift>Right</wordshift>
+				<lump>
+									
+					<stream id="B2">
+						<ratefactor>1</ratefactor>
+						<quantization>8</quantization>
+						<packedbits>8</packedbits>
+						<alignment>Undefined</alignment>
+						<shift>Undefined</shift>
+						<format>IF</format>
+						<encoding>BIN</encoding>
+						<band id="B2"/>
+					</stream>
+					
+                </lump>
+            </chunk>		
+        </block>
+    </lane>
+	
+    <system id="NT1065">
+        <freqbase format="MHz">99.375</freqbase>
+        <equipment>NT1065</equipment>
+        <source id="RoofAntenna">
+            <type>UNKNOWN</type>
+            <polarization>UNKNOWN</polarization>
+            <idcluster>Antenna</idcluster>
+        </source>
+        <cluster id="Antenna"/>
+    </system>
+	
+	<band id="B2">
+		<centerfreq format="GHz">1.20714</centerfreq>
+		<translatedfreq format="MHz">17.14</translatedfreq>
+		<delaybias format="sec">0.0</delaybias>
+		<bandwidth format="MHz">30.2</bandwidth>
+	</band>				
+
+	<session id="0">
+		<toa>2017-04-06T06:22:04Z</toa>
+		<position lat="24.7838699327633" lon="121.00096039685" height="173.888913"/>
+		<contact>Dennis M. Akos</contact>
+		<campaign>GNSS SDR test</campaign>
+		<scenario>Short signal collection</scenario>
+	</session>
+    
+	<file>
+		<url>Beidou_B2_IF_signal.bin</url>
+		<timestamp>2017-04-06T06:22:04.0Z</timestamp>
+        <owner>CU</owner>
+        <lane id="SingleFreq"/>
+    </file>
+
+</metadata>
