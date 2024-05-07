@@ -12,7 +12,7 @@ Programmed in a user-friendly language, MATLAB, DPE_module v1.0 is aimed for bet
 
 DPE_module v1.0 would use the grid-based method, by which of establishing a set of candidate position, velocity, and time (PVT) and obtaining the correlations from each satellite before finally non-coherently summing them up to obtain the candidate position with the highest signal correlation, which would be the PVT estimate of DPE. Position as well as receiver clock bias estimate from 2SP are also used as initialization for the grid of candidate position. 
 
-Parts of SoftGNSS v3.0 have been adapted to allow the DPE module to be integrated into it. 
+Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module v1.0 to be integrated into it. 
 
 ## Running the software
 The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using the software follows the same steps as running a regular SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
