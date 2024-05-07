@@ -37,6 +37,9 @@ DPE_module v.10 requires ground truth coordinates in geodetic coordinates to out
 ## Declaration
 I, Sergio Vicenzo, hereby do not claim ownership nor responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos. All the changes made to the SoftGNSS v3.0 software have been labelled and the GNU license kept in each file, in accordance to GNU General Public License.
 
+## References
+Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach. Birkhäuser, Boston, Massachusetts.
+
 ## Note
 This repository is still under development. I apologise if some information is incomplete or if you encounter any problems...
 
