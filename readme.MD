@@ -15,7 +15,7 @@ DPE_module v1.0 would use the grid-based method, by which of establishing a set 
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module v1.0 to be integrated into it. 
 
 ## Running the software
-The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using the software follows the same steps as running a regular SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
+The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using the software follows the same steps as running a regular SoftGNSS v3.0. Further information on using the software can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
 
 ## DPE_module configuration
 The grid of candidate PVTs are by default configured to have 1-meter spacing between them. The grid spacing for the latitude-longitude-height estimation can be changed from `initSettings.m` under the parameter `settings.candPVT_spacing`. Yet, the spacing between the clock bias candidates is fixed at 1 meter. 
