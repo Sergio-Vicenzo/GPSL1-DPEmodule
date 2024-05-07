@@ -26,6 +26,7 @@ Parts of SoftGNSS v3.0 have been adapted to allow the DPE module to be integrate
 The following code works the same way as the SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme ("readme - SoftGNSS.txt") and ppt ("GPS_L1_CA_SDR.pdf").
 
 ## DPE_module configuration
+# test
 The grid of candidate PVTs are by default configured to have 1-meter spacing between them. The grid spacing for the latitude-longitude-height estimation can be changed from initSettings.m under the parameter settings.candPVT_spacing. Yet, the spacing between the clock bias candidates is fixed at 1 meter. The PVT search space is set to have a span of ±30 meters for the latitude and longitude search space, ±50 meters for the height search space, and ±20 meters for clock bias by default. The candidate PVTs would be centred around 2SP PVT estimate for every epoch to avoid DPE estimates from diverging in cases of strong interference or MP or NLOS effect. 
 
 The search space span can be edited in initSettings.m under the parameters settings.DPE_latlong_span, settings.DPE_height_span, and settings.DPE_clkBias_span (the parameter names seem self-explanatory). The non-coherent integration time for DPE can also be changed through initSettings.m under the parameter settings.DPE_nonCohInt to improve the performance of DPE as the satellite correlations would be more filtered. By default, the non-coherent integration time is set to 1 ms.
