@@ -17,7 +17,7 @@ Using the following code works the same way as the SoftGNSSv3.0. Further informa
 More details on the DPE module soon...
 
 ## Declaration
-I, Sergio Vicenzo, hereby do not claim ownership or responsibility to Prof. Borre's and Prof. Akos' SOftGNSS v.3.0. All the changes made to the SoftGNSS v3.0 software have been labelled in the code and the license kept, in accordance to GNU General Public License.
+I, Sergio Vicenzo, hereby do not claim ownership or responsibility to Prof. Borre's and Prof. Akos' SOftGNSS v.3.0. All the changes made to the SoftGNSS v3.0 software have been labelled in the code and the GNU license kept in each file, in accordance to GNU General Public License.
 
 ## Note
 This repository is still under development. I apologise if some information is incomplete or you encounter any problems...
