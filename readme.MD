@@ -16,7 +16,7 @@ Email: <seergio.vicenzo@connect.polyu.hk>
 ## Description
 DPE_module v1.0 is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning (2SP) MATLAB SDRs. 2SP information, namely tracking code phase, signal transmission time, receiver local time, satellite position from Least Squares, satellite clock bias, and Least Squares position solution, are used as input for the plug-in module. 
 
-Programmed in a user-friendly language, MATLAB, DPE_module v1.0 is aimed for better understanding and familiarity of a practical implementation of DPE. DPE_module v1.0 is integrated into the SoftGNSS MATLAB GPS L1 C/A 2SP SDR from Borre et al. (2007), which is based on Scalar Tracking Loop (STL). But integration of the proposed DPE module is not restricted to an STL-based receiver and can be integrated with other 2SP architectures, such as Vector Tracking Loop (VTL). Additionally, the GNSS constellation is not restricted to GPS L1 C/A, but is also integrable with SDRs working with other BPSK-modulated GNSS signals. 
+Programmed in a user-friendly language, MATLAB, DPE_module v1.0 is aimed for better understanding and familiarity of a practical implementation of DPE. DPE_module v1.0 is integrated into the SoftGNSS MATLAB GPS L1 C/A 2SP SDR from Borre et al. (2007), which is based on Scalar Tracking Loop (STL). But integration of DPE_module v1.0 is not restricted to an STL-based receiver and can be integrated with other 2SP architectures, such as Vector Tracking Loop (VTL). Additionally, the GNSS constellation is not restricted to GPS L1 C/A, but is also integrable with SDRs working with other BPSK-modulated GNSS signals. 
 
 DPE_module v1.0 would use the grid-based method, by which of establishing a set of candidate position, velocity, and time (PVT) and obtaining the correlations from each satellite before finally non-coherently summing them up to obtain the candidate position with the highest signal correlation, which would be the PVT estimate of DPE. Position as well as receiver clock bias estimate from 2SP are also used as initialization for the grid of candidate position. 
 
@@ -26,16 +26,19 @@ Parts of SoftGNSS v3.0 have been adapted to allow the DPE module to be integrate
 The following code works the same way as the SoftGNSS v3.0. Further information on using the code can be found in the original SoftGNSS v3.0 readme ("readme - SoftGNSS.txt") and ppt ("GPS_L1_CA_SDR.pdf").
 
 ## DPE_module configuration
-The grid of candidate PVTs are by default configured to have 1-meter spacing between them. The grid spacing for the latitude-longitude-height estimation can be changed from initSettings.m under the parameter settings.candPVT_spacing. Yet, the spacing between the clock bias candidates is fixed at 1 meter. The PVT search space is set to have a span of ±30 meters for the latitude and longitude search space, ±50 meters for the height search space, and ±20 meters for clock bias by default. The candidate PVTs would be centred around 2SP PVT estimate for every epoch to avoid DPE estimates from diverging in cases of strong interference or MP or NLOS effect. 
+The grid of candidate PVTs are by default configured to have 1-meter spacing between them. The grid spacing for the latitude-longitude-height estimation can be changed from initSettings.m under the parameter settings.candPVT_spacing. Yet, the spacing between the clock bias candidates is fixed at 1 meter. 
 
-The search space span can be edited in initSettings.m under the parameters settings.DPE_latlong_span, settings.DPE_height_span, and settings.DPE_clkBias_span (the parameter names seem self-explanatory). The non-coherent integration time for DPE can also be changed through initSettings.m under the parameter settings.DPE_nonCohInt to improve the performance of DPE as the satellite correlations would be more filtered. By default, the non-coherent integration time is set to 1 ms.
+The PVT search space is set to have a span of ±30 meters for the latitude and longitude search space, ±50 meters for the height search space, and ±20 meters for clock bias by default. The candidate PVTs would be centred around 2SP PVT estimate for every epoch. 
+The search space span can be changed in initSettings.m under the parameters settings.DPE_latlong_span, settings.DPE_height_span, and settings.DPE_clkBias_span (the parameter names seem self-explanatory). 
 
-The proposed DPE can also be set to output the correlograms, plotted at the estimated DPE height, for each of the satellite correlations as well as the resulting non-coherent sum over the navigation domain (parameter settings.DPE_plotCorrelogram).
+The non-coherent integration time for DPE can also be changed through initSettings.m under the parameter settings.DPE_nonCohInt to improve the performance of DPE as the satellite correlations would be more filtered. By default, the non-coherent integration time is set to 1 ms.
 
-DPE_module v.10 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as settings.gt_llh at initSettings.m.
+DPE_module v1.0 can also be set to output the correlograms, plotted at the estimated DPE height, for each of the satellite correlations as well as the resulting non-coherent sum over the navigation domain (parameter settings.DPE_plotCorrelogram).
+
+DPE_module v1.0 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as settings.gt_llh at initSettings.m.
 
 ## Declaration
-I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos and the "llh2xyz.m" script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and the GNU license is kept intact each code file, in accordance to GNU General Public License. No changes were made to the "llh2xyz.m" script and its copyright statement kept intact.
+I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos and the "llh2xyz.m" script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license kept intact in each code file, in accordance to GNU General Public License. No changes were made to the "llh2xyz.m" script and its copyright statement is kept intact.
 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
