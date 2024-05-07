@@ -37,7 +37,7 @@ DPE_module v1.0 can also be set to output the correlograms, plotted at the estim
 
 DPE_module v1.0 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as settings.gt_llh at initSettings.m.
 
-## Declaration
+## Disclaimer
 I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos and the "llh2xyz.m" script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license kept intact in each code file, in accordance to GNU General Public License. No changes were made to the "llh2xyz.m" script and its copyright statement is kept intact.
 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
