@@ -1,7 +1,7 @@
 # DPE_module v1.0
 An open-source GNSS Direct Position Estimation Plug-in Module for Two-Step Positioning SDRs
 
-Intelligent Positioning and Navigation Laboratory (IPNL) / PNT Signal Processing Lab
+Intelligent Positioning and Navigation Laboratory (IPNL) / PNT Signal Processing Laboratory
 
 The Hong Kong Polytechnic University
 
