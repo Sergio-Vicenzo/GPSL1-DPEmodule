@@ -30,7 +30,7 @@ DPE_module v1.0 can also be set to output the correlograms, plotted at the estim
 DPE_module v1.0 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as `settings.gt_llh` at `initSettings.m`.
 
 ## Dependencies
-DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB software has yet to be tested.
+DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested.
 
 Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
