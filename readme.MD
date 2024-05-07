@@ -4,7 +4,6 @@ DPE_module is a Direct Position Estimation (DPE) plug-in module that can be inte
 ## Authors
 -------------------------------------------------------------------------------
 Sergio Vicenzo  
-E-Mail: <seergio.vicenzo@connect.polyu.hk>
 
 ## Description
 DPE_module is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning MATLAB SDRs. 
