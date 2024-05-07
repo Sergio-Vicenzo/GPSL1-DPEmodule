@@ -48,7 +48,7 @@ I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
 ## References
-Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach. Birkhäuser, Boston, Massachusetts.
+Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach](https://link.springer.com/book/10.1007/978-0-8176-4540-3). Birkhäuser, Boston, Massachusetts.
 
 ## Note
 This repository is still under development. I apologise if some information is incomplete or if you encounter any problems...
