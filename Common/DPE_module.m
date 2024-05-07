@@ -49,7 +49,7 @@ function [navSolutions]=DPE_module...
 %       DPE_clkBias     - Estimated receiver clock bias from DPE
 
 %--------------------------------------------------------------------------
-%------------------------- DPE_modulev1.0 ---------------------------------
+%------------------------- DPE_module v1.0 --------------------------------
 
 % Copyright (C) 2024 Sergio Vicenzo
 % Written by Sergio Vicenzo
