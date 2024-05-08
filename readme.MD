@@ -61,7 +61,7 @@ No copyright infringement is intended from any of the MATLAB scripts provided in
 ## References
 Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach](https://link.springer.com/book/10.1007/978-0-8176-4540-3). Birkhäuser, Boston, Massachusetts.
 
-Vicenzo S, Xu B, Xu H, Hsu L-T (2024b) GNSS direct position estimation-inspired positioning with pseudorange correlogram for urban navigation. GPS Solutions 28(2). https://doi.org/10.1007/s10291-024-01627-5
+Vicenzo S, Xu B, Xu H, Hsu L-T (2024) GNSS direct position estimation-inspired positioning with pseudorange correlogram for urban navigation. GPS Solutions 28(2). https://doi.org/10.1007/s10291-024-01627-5
 
 ## Note
 This repository is still under development. I apologise if some information is incomplete or if you encounter any problems...
