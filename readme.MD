@@ -5,6 +5,10 @@ An open-source GNSS Direct Position Estimation Plug-in Module for Two-Step Posit
 
 The Hong Kong Polytechnic University
 
+## Related Publication
+DPE_module v1.0 is to be formally introduced at the upcoming Institute of Navigation GNSS+ 2024 conference.
+<https://www.ion.org/gnss/abstracts.cfm?paperID=13473>
+
 ## Introduction
 DPE_module v1.0 is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning (2SP) MATLAB SDRs. 2SP information, namely tracking code phase, signal transmission time, receiver local time, satellite position from Least Squares, satellite clock bias, and Least Squares position solution, are used as input for the plug-in module. 
 
