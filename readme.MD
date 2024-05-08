@@ -22,16 +22,21 @@ Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module v1.0 to be inte
 The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using it follows the same steps as running a regular SoftGNSS v3.0. Further information on using the software can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
 
 ## DPE_module configuration
-The grid of candidate PVTs are by default configured to have 1-meter spacing between them. The grid spacing for the latitude-longitude-height estimation can be changed from `initSettings.m` under the parameter `settings.candPVT_spacing`. Yet, the spacing between the clock bias candidates is fixed at 1 meter. 
+All DPE_module v1.0 parameters can be edited from `initSettings.m`, which are listed below.
 
-The PVT search space is set to have a span of ±30 meters for the latitude and longitude search space, ±50 meters for the height search space, and ±20 meters for clock bias by default. The candidate PVTs would be centred around 2SP PVT estimate for every epoch. 
-The search space span can be changed in `initSettings.m` under the parameters `settings.DPE_latlong_span`, `settings.DPE_height_span`, and `settings.DPE_clkBias_span` (the parameter names seem self-explanatory). 
+1. `settings.candPVT_spacing` = Grid spacing for the latitude-longitude-height estimation (Default = 1 meter)
 
-The non-coherent integration time for DPE can also be changed through `initSettings.m` under the parameter `settings.DPE_nonCohInt` to improve the performance of DPE as the satellite correlations would be more filtered. By default, the non-coherent integration time is set to 1 ms.
+2. `settings.DPE_latlong_span` = Span of latitude and longitude search space (Default = ±30 meters)
 
-DPE_module v1.0 can also be set to output the correlograms, plotted at the estimated DPE height, for each of the satellite correlations as well as the resulting non-coherent sum over the navigation domain (parameter `settings.DPE_plotCorrelogram` at `initSettings.m`).
+3. `settings.DPE_height_span` = Span of height search space (Default = ±50 meters)
 
-DPE_module v1.0 requires ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP. Ground truth coordinates are labelled as `settings.gt_llh` at `initSettings.m`.
+4. `settings.DPE_clkBias_span` = Span of clock bias search space (Default = ±20 meters)
+
+5. `settings.DPE_nonCohInt` = DPE non-coherent integration time (Default = 1 ms) to improve the performance of DPE as the satellite correlations would be more filtered
+
+6. `settings.DPE_plotCorrelogram` = Output the correlograms, plotted at the estimated DPE height
+
+7. `settings.gt_llh` = Ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP
 
 ## Dependencies
 DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested.
