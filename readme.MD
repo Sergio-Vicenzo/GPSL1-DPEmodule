@@ -14,7 +14,7 @@ DPE_module v1.0 is a Direct Position Estimation (DPE) plug-in module that can be
 
 Programmed in a user-friendly language, MATLAB, DPE_module v1.0 is aimed for better understanding and familiarity of a practical implementation of DPE. In this repository, DPE_module v1.0 is integrated into the SoftGNSS MATLAB GPS L1 C/A 2SP SDR from Borre et al. (2007), which is based on Scalar Tracking Loop (STL). But integration of DPE_module v1.0 is not restricted to an STL-based receiver and can be integrated with other 2SP architectures, such as Vector Tracking Loop (VTL). Additionally, the GNSS constellation is not restricted to GPS L1 C/A, but is also integrable with SDRs working with other BPSK-modulated GNSS signals. 
 
-DPE_module v1.0 would use the grid-based method, by which of establishing a set of candidate position, velocity, and time (PVT) and obtaining the correlations from each satellite before finally non-coherently summing them up to obtain the candidate position with the highest signal correlation, which would be the PVT estimate of DPE. Position as well as receiver clock bias estimate from 2SP are also used as initialization for the grid of candidate position. 
+DPE_module v1.0 would use the grid-based method, by which of establishing a set of candidate position, velocity, and time (PVT) and obtaining the correlations from each satellite before finally non-coherently summing them up to obtain the candidate position with the highest signal correlation, which would be the PVT estimate of DPE. Position as well as receiver clock bias estimate from 2SP are also used as initialization for the grid of candidate position. An illustration is provided below (Vicenzo et al. 2024)
 
 ![DPE correlogram illustration](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/DPE%20correlogram.jpg)
 
@@ -60,6 +60,8 @@ No copyright infringement is intended from any of the MATLAB scripts provided in
 
 ## References
 Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach](https://link.springer.com/book/10.1007/978-0-8176-4540-3). Birkhäuser, Boston, Massachusetts.
+
+Vicenzo S, Xu B, Xu H, Hsu L-T (2024b) GNSS direct position estimation-inspired positioning with pseudorange correlogram for urban navigation. GPS Solutions 28(2). https://doi.org/10.1007/s10291-024-01627-5
 
 ## Note
 This repository is still under development. I apologise if some information is incomplete or if you encounter any problems...
