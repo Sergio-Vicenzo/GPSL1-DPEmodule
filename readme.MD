@@ -18,6 +18,8 @@ DPE_module v1.0 would use the grid-based method, by which of establishing a set 
 
 ![DPE correlogram illustration](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/DPE%20correlogram.jpg)
 
+Instead of iteratively computing the signal correlations per every candidate position, our DPE plug-in module can pre-calculate the correlations per every pre-determined chip spacing or code phase. This implementation was previously used by previous research on collective detection, which is another name for DPE, to save computational time (Axelrad et al., 2009; Cheong et al., 2011). 
+
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module v1.0 to be integrated into it. 
 
 ## Running the software
@@ -40,6 +42,8 @@ All DPE_module v1.0 parameters can be edited from `initSettings.m`, which are li
 
 7. `settings.gt_llh` = Ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP
 
+8. 'settings.chipspacing_dpe_precalc' = Chip spacings between the pre-calculated correlations (Default = chips/sample)
+
 ## Dependencies
 DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested.
 
@@ -59,7 +63,11 @@ I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
 ## References
+Axelrad P, Donna J, Mitchell M (2009) Enhancing GNSS acquisition by combining signals from multiple channels and satellites. In: Proc. ION GNSS 2009, Institute of Navigation, Savannah, Georgia, USA, September 22 – 25, 3117-3128
+
 Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach](https://link.springer.com/book/10.1007/978-0-8176-4540-3). Birkhäuser, Boston, Massachusetts.
+
+Cheong JW, Wu J, Dempster AG, Rizos C (2011) Efficient Implementation of Collective Detection. In: Proc. IGNSS Symposium 2011, International Global Navigation Satellite Systems Society, Sydney, New South Wales, Australia, November 15-17.
 
 Vicenzo S, Xu B, Xu H, Hsu L-T (2024) GNSS direct position estimation-inspired positioning with pseudorange correlogram for urban navigation. GPS Solutions 28(2). https://doi.org/10.1007/s10291-024-01627-5
 
