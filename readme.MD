@@ -45,7 +45,7 @@ All DPE_module v1.0 parameters can be edited from `initSettings.m`, which are li
 8. `settings.chipspacing_dpe_precalc` = Chip spacings between the pre-calculated correlations (Default = chips/sample)
 
 ## Dependencies
-DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested.
+DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
 
 Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
