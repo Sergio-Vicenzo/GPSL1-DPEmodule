@@ -42,7 +42,7 @@ All DPE_module v1.0 parameters can be edited from `initSettings.m`, which are li
 
 7. `settings.gt_llh` = Ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP
 
-8. 'settings.chipspacing_dpe_precalc' = Chip spacings between the pre-calculated correlations (Default = chips/sample)
+8. `settings.chipspacing_dpe_precalc` = Chip spacings between the pre-calculated correlations (Default = chips/sample)
 
 ## Dependencies
 DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested.
