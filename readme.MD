@@ -55,7 +55,7 @@ Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `re
 
 ## Author
 
-DPE_module v1.0 was written by Sergio Vicenzo.
+DPE_module v1.0 was written by Sergio Vicenzo, inspired by the multicorrelator-based DPE (Corr-DPE) introduced written by HaoSheng Xu and Bing Xu (Vicenzo et al. 2023).
 
 Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. He is supervised by Assistant Professor Bing Xu, and co-supervised by Associate Professor Li-Ta Hsu. His research interests include GNSS urban navigation and positioning with direct position estimation.
 
@@ -72,6 +72,8 @@ Axelrad P, Donna J, Mitchell M (2009) Enhancing GNSS acquisition by combining si
 Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach](https://link.springer.com/book/10.1007/978-0-8176-4540-3). Birkhäuser, Boston, Massachusetts.
 
 Cheong JW, Wu J, Dempster AG, Rizos C (2011) Efficient Implementation of Collective Detection. In: Proc. IGNSS Symposium 2011, International Global Navigation Satellite Systems Society, Sydney, New South Wales, Australia, November 15-17.
+
+Vicenzo S, Xu B, Dey A, Hsu L-T (2023) Experimental Investigation of GNSS Direct Position Estimation in Densely Urban Area. In: In: Proc. ION GNSS+ 2023, Institute of Navigation, Denver, Colorado, USA, September 19 – 23, 2906-2919.
 
 Vicenzo S, Xu B, Xu H, Hsu L-T (2024) GNSS direct position estimation-inspired positioning with pseudorange correlogram for urban navigation. GPS Solutions 28(2). https://doi.org/10.1007/s10291-024-01627-5
 
