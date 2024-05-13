@@ -55,7 +55,7 @@ Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `re
 
 ## Author
 
-DPE_module v1.0 was written by Sergio Vicenzo, inspired by the multicorrelator-based DPE (Corr-DPE) introduced written by HaoSheng Xu and Bing Xu (Vicenzo et al. 2023).
+DPE_module v1.0 was written by Sergio Vicenzo, inspired by the multicorrelator-based DPE (Corr-DPE) written by HaoSheng Xu and Bing Xu, which was previously introduced in (Vicenzo et al. 2023).
 
 Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. He is supervised by Assistant Professor Bing Xu, and co-supervised by Associate Professor Li-Ta Hsu. His research interests include GNSS urban navigation and positioning with direct position estimation.
 
