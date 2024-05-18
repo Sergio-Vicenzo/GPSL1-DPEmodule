@@ -104,9 +104,6 @@ if (fid > 0)
 
         %--- Do the acquisition -------------------------------------------
         disp ('   Acquiring satellites...');
-        % Edited to use updated acquisition code
-        % Sergio Vicenzo - 22 Feb 2024
-%         acqResults = acquisition(data, settings);
         acqResults = acquisition(data, settings);
 
         plotAcquisition(acqResults);
