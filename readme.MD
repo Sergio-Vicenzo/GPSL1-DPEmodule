@@ -6,7 +6,7 @@ An open-source GNSS Direct Position Estimation Plug-in Module for Two-Step Posit
 The Hong Kong Polytechnic University
 
 ## Related Publication
-DPE_module v1.0 is to be formally introduced at the upcoming Institute of Navigation GNSS+ 2024 conference.
+DPE_module v1.0 is to be formally introduced at the upcoming Institute of Navigation GNSS+ 2024 (ION GNSS+ 2024) conference.
 <https://www.ion.org/gnss/abstracts.cfm?paperID=13473>
 
 ## Introduction
