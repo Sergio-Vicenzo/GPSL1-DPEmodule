@@ -18,7 +18,7 @@ DPE_module v1.0 would use the grid-based method, by which of establishing a set 
 
 ![DPE correlogram illustration](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/DPE%20correlogram.jpg)
 
-Instead of iteratively computing the signal correlations per every candidate position, our DPE plug-in module can pre-calculate the correlations per every pre-determined chip spacing or code phase. This implementation was previously used by previous research on collective detection, which is another name for DPE, to save computational time (Axelrad et al., 2009; Cheong et al., 2011). 
+Instead of iteratively computing the signal correlations per every candidate position, our DPE plug-in module pre-calculates the correlations per every pre-determined chip spacing or code phase. This implementation was previously used by previous research on collective detection, which is another name for DPE, to save computational time (Axelrad et al., 2009; Cheong et al., 2011). 
 
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module v1.0 to be integrated into it. 
 
