@@ -1,7 +1,7 @@
 # DPE_module v1.0
 An open-source GNSS Direct Position Estimation Plug-in Module for Two-Step Positioning SDRs, integrated into SoftGNSS v3.0 by Borre et al. (2007)
 
-[Intelligent Positioning and Navigation Laboratory (IPNL)](https://www.polyu.edu.hk/aae/ipn-lab/us/index.html) / [PNT Signal Processing Laboratory](https://pbingxu.github.io/team/)
+[Intelligent Positioning and Navigation Laboratory (IPNL)](https://www.polyu.edu.hk/aae/ipn-lab/us/index.html) / [PNT Signal Processing Group](https://pbingxu.github.io/team/)
 
 The Hong Kong Polytechnic University
 
