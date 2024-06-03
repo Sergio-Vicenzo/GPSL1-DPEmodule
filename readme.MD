@@ -53,6 +53,29 @@ DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the 
 
 Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
+## Sample IF datasets
+Sample GPS L1 C/A intermediate frequency (IF) datasets can be accessed through the following link
+[Sample IF datasets](https://connectpolyu-my.sharepoint.com/:f:/g/personal/22038565r_connect_polyu_hk/Ej3Njy78MXxLiFZH9t_D4MkBxLsDTPl2j9kxkbtBhRGB8A?e=BtmWtJ)
+
+All the datasets were collected in a static urban scenario at The Hong Kong Polytechnic University main campus. The collection site taken with Google Earth is shown below (marked H).
+
+![LABSAT data collection site](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/DPE%20correlogram.jpg)
+
+The skymask for the datasets is shown below, with satellites marked green either line-of-sight (LOS) or multipath (MP) and satellites marked red are non-line-of-sight (NLOS).
+
+![Skymask](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/DPE%20correlogram.jpg)
+
+The datasets have the following configuration.
+
+FRONT-END EQUIPMENT	: LABSAT 3 Wideband
+SAMPLING FREQUENCY	: 58 MHz
+INTERMEDIATE FREQUENCY	: 1580e6-1575.42e6 Hz 	(settings.IF = 1580e6-1575.42e6)
+DATA TYPE		: 'schar' or 'int8' 	(settings.dataType = 'schar')
+FILE TYPE		: IQ 			(settings.fileType = 2)
+FRONT-END BANDWIDTH	: 56 MHz
+GROUND TRUTH (in llh)	: [22.30397720 114.17889380 10.770] (settings.gt_llh = [22.30397720 114.17889380 10.770])
+FILE LENGTH		: 240,000 ms
+
 ## Author
 
 DPE_module v1.0 was written by Sergio Vicenzo, inspired by the multicorrelator-based DPE (Corr-DPE) written by HaoSheng Xu and Bing Xu, which was previously introduced in (Vicenzo et al. 2023).
