@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="https://github.com/IonMetadataWorkingGroup">
+    
+	<lane id="SingleFreq">
+        
+		<bandsrc idband="L1" idsrc="RoofAntenn"/>
+		
+
+
+		<system id="NT1065"/>
+        
+		<block>
+            <cycles>0</cycles>
+            <sizeheader>0</sizeheader>
+            <sizefooter>0</sizefooter>
+			<chunk>
+                <sizeword>1</sizeword>
+                <countwords>1</countwords>
+                <endian>Undefined</endian>
+                <padding>None</padding>
+                <wordshift>Right</wordshift>
+				<lump>
+									
+					<stream id="L1">
+						<ratefactor>1</ratefactor>
+						<quantization>8</quantization>
+						<packedbits>8</packedbits>
+						<alignment>Undefined</alignment>
+						<shift>Undefined</shift>
+						<format>IF</format>
+						<encoding>BIN</encoding>
+						<band id="L1"/>
+					</stream>
+					
+                </lump>
+            </chunk>		
+        </block>
+    </lane>
+	
+    <system id="NT1065">
+        <freqbase format="MHz">53.0</freqbase>
+        <equipment>NT1065</equipment>
+        <source id="RoofAntenna">
+            <type>UNKNOWN</type>
+            <polarization>UNKNOWN</polarization>
+            <idcluster>Antenna</idcluster>
+        </source>
+        <cluster id="Antenna"/>
+    </system>
+	
+	<band id="L1">
+		<centerfreq format="GHz">1.575420</centerfreq>
+		<translatedfreq format="MHz">14.580</translatedfreq>
+		<delaybias format="sec">0.0</delaybias>
+		<bandwidth format="MHz">27.1</bandwidth>
+	</band>				
+
+	<session id="0">
+		<toa>2017-03-14T23:38:54Z</toa>
+		<position lat="40.00751188936323" lon="-105.261924456414" height="1625.7902"/>
+		<contact>Dennis M. Akos</contact>
+		<campaign>GNSS SDR test</campaign>
+		<scenario>Short signal collection</scenario>
+	</session>
+    
+	<file>
+		<url>GPS_L1_CA_IF_signal.bin</url>
+		<timestamp>2017-03-14T23:38:54.0Z</timestamp>
+        <owner>CU</owner>
+        <lane id="SingleFreq"/>
+    </file>
+
+</metadata>
