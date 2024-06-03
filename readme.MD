@@ -70,7 +70,7 @@ The datasets have the following configuration.
 
 `FRONT-END EQUIPMENT`		: LABSAT 3 Wideband
 
-`SAMPLING FREQUENCY`		: 58 MHz
+`SAMPLING FREQUENCY`		: 58 MHz				(settings.samplingFreq = 58e6)
 
 `INTERMEDIATE FREQUENCY`	: 1580e6-1575.42e6 Hz 			(settings.IF = 1580e6-1575.42e6)
 
