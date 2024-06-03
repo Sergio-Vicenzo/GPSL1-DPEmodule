@@ -68,13 +68,21 @@ The skymask for the datasets is shown below, with satellites marked green either
 The datasets have the following configuration.
 
 FRONT-END EQUIPMENT	: LABSAT 3 Wideband
+
 SAMPLING FREQUENCY	: 58 MHz
+
 INTERMEDIATE FREQUENCY	: 1580e6-1575.42e6 Hz 	(settings.IF = 1580e6-1575.42e6)
+
 DATA TYPE		: 'schar' or 'int8' 	(settings.dataType = 'schar')
+
 FILE TYPE		: IQ 			(settings.fileType = 2)
+
 FRONT-END BANDWIDTH	: 56 MHz
+
 GROUND TRUTH (in llh)	: [22.30397720 114.17889380 10.770] (settings.gt_llh = [22.30397720 114.17889380 10.770])
+
 FILE LENGTH		: 240,000 ms
+
 
 ## Author
 
