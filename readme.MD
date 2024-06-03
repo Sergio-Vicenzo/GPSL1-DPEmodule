@@ -63,7 +63,7 @@ All the datasets were collected in a static urban scenario at The Hong Kong Poly
 
 The skymask for the datasets is shown below, with satellites marked green either line-of-sight (LOS) or multipath (MP) and satellites marked red are non-line-of-sight (NLOS).
 
-![Skymask](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/Skymask.tif)
+![Skymask](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/Skymask.jpg)
 
 The datasets have the following configuration.
 
@@ -71,17 +71,17 @@ The datasets have the following configuration.
 
 `SAMPLING FREQUENCY`		: 58 MHz
 
-`INTERMEDIATE FREQUENCY`	: 1580e6-1575.42e6 Hz 		(settings.IF = 1580e6-1575.42e6)
+`INTERMEDIATE FREQUENCY`	: 1580e6-1575.42e6 Hz 			(settings.IF = 1580e6-1575.42e6)
 
-`DATA TYPE`		: 'schar' or 'int8' 			(settings.dataType = 'schar')
+`DATA TYPE`			: 'schar' or 'int8' 			(settings.dataType = 'schar')
 
-`FILE TYPE`		: IQ 					(settings.fileType = 2)
+`FILE TYPE`			: IQ 					(settings.fileType = 2)
 
-`FRONT-END BANDWIDTH`	: 56 MHz
+`FRONT-END BANDWIDTH`		: 56 MHz
 
-`GROUND TRUTH` (in llh)	: [22.30397720 114.17889380 10.770] 	(settings.gt_llh = [22.30397720 114.17889380 10.770])
+`GROUND TRUTH` (in llh)		: [22.30397720 114.17889380 10.770] 	(settings.gt_llh = [22.30397720 114.17889380 10.770])
 
-`FILE LENGTH`		: 240,000 ms 				(settings.msToProcess = 240000)
+`FILE LENGTH`			: 240,000 ms 				(settings.msToProcess = 240000)
 
 
 ## Author
