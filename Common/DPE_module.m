@@ -68,7 +68,7 @@ function [navSolutions]=DPE_module...
 %   with this program; if not, write to the Free Software Foundation, Inc.,
 %   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-%% Last Updated: 7 June 2024
+% Last Updated: 7 June 2024
 
 addpath include common
 
@@ -249,7 +249,7 @@ for j=1:length(activeChnList)
 
         for spacing=round(chip_spacings,2)
 
-        spacing = -spacing; %% Added on 7 June 2024 
+        spacing = -spacing; % Added on 7 June 2024 
                             % to reverse the chip spacings
 
         % === Define index into the code vector ===========================
