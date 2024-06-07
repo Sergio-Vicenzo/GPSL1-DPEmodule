@@ -249,6 +249,9 @@ for j=1:length(activeChnList)
 
         for spacing=round(chip_spacings,2)
 
+        spacing = -spacing; %% Added on 7 June 2024 
+                            % to reverse the chip spacings
+
         % === Define index into the code vector ===========================
         delay_index = ...
             trackResults(activeChnList(j)).remCodePhase(closestIndex)+spacing : ...
