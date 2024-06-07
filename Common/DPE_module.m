@@ -249,15 +249,12 @@ for j=1:length(activeChnList)
 
         for spacing=round(chip_spacings,2)
 
-        spacing = -spacing; % Added on 7 June 2024 
-                            % to reverse the chip spacings
-
         % === Define index into the code vector ===========================
         delay_index = ...
-            trackResults(activeChnList(j)).remCodePhase(closestIndex)+spacing : ...
+            trackResults(activeChnList(j)).remCodePhase(closestIndex)-spacing : ...
             codePhaseStep : ...
             ((blksize-1)*codePhaseStep + ...
-            trackResults(activeChnList(j)).remCodePhase(closestIndex)+spacing);       
+            trackResults(activeChnList(j)).remCodePhase(closestIndex)-spacing);       
 
             caCode1 = [caCode(end) caCode caCode(1)];
             tcodee = ceil(delay_index)+1;
