@@ -23,7 +23,7 @@ Instead of iteratively computing the signal correlations per every candidate pos
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module v1.0 to be integrated into it. 
 
 ## Running the software
-The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using it follows the same steps as running a regular SoftGNSS v3.0. Modifications were made to SOftGNSS v3.0 to also run on 16-bit samples (int16/short data). 
+The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module v1.0, and using it follows the same steps as running a regular SoftGNSS v3.0. Modifications were made to SOftGNSS v3.0 to also run on 16-bit samples (`int16` or `short` data types). 
 
 When running with 16-bit data samples, use `int16` in `settings.dataType` (instead of `short`). On the other hand, use `schar` in `settings.dataType` (instead of `int8`) when running with 8-bit data samples.
 
