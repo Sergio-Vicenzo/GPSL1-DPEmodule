@@ -56,7 +56,7 @@ Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `re
 ## Sample IF datasets
 Sample GPS L1 C/A intermediate frequency (IF) datasets can be accessed through the following link
 
-[Sample IF datasets](https://connectpolyu-my.sharepoint.com/:f:/g/personal/22038565r_connect_polyu_hk/Ej3Njy78MXxLiFZH9t_D4MkBxLsDTPl2j9kxkbtBhRGB8A?e=BtmWtJ)
+[Sample IF datasets](https://drive.google.com/drive/folders/12i75AUCq3DoXqF6xqQ88tibIY3eSlucN?usp=sharing)
 
 All the datasets were collected in a static urban scenario at The Hong Kong Polytechnic University main campus. The collection site taken with Google Earth is shown below (marked H).
 
