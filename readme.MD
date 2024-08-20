@@ -94,7 +94,7 @@ Sergio Vicenzo is currently a PhD student at the Department of Aeronautical and 
 Email: <seergio.vicenzo@connect.polyu.hk>
 
 ## Disclaimer
-I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Borre and Prof. Akos and the `llh2xyz.m` script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license kept intact in each code file, in accordance to GNU General Public License. No changes were made to the `llh2xyz.m` script and its copyright statement is kept intact.
+I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Kai Borre and Prof. Dennis Akos and the `llh2xyz.m` script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license has been kept intact in each code file, in accordance to GNU General Public License. No changes were made to the `llh2xyz.m` script and its copyright statement is kept intact.
 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
@@ -111,6 +111,8 @@ Vicenzo S, Xu B, Xu H, Hsu L-T (2024) GNSS direct position estimation-inspired p
 
 ## Note
 This repository is still under development. I apologise if some information is incomplete or if you encounter any problems...
+
+If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 
 Last Updated: 12 June 2024
 
