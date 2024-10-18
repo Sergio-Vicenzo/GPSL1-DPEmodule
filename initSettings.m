@@ -196,6 +196,10 @@ settings.chipspacing_dpe_precalc = settings.codeFreqBasis ...
 % Added by Sergio Vicenzo - 5 Mar 2024
 settings.DPE_nonCohInt = 1; % in ms
 
+% DPE's coherent integration time
+% Added by Sergio Vicenzo - 15 June 2024
+settings.DPE_cohInt = 1; % in ms
+
 % Span of lat-long search space i.e., plus-minus
 % "settings.DPE_latlong_span" meters
 % Added by Sergio Vicenzo - 16 Feb 2024
