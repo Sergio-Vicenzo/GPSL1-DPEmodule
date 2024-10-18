@@ -245,7 +245,7 @@ for j=1:length(activeChnList)
         % === Get the C/A code ============================================
         caCode = generateCAcode(trackResults(activeChnList(j)).PRN);
 
-        for spacing=round(chip_spacings,2)
+        for spacing=chip_spacings
 
         % === Define index into the code vector ===========================
         delay_index = ...
