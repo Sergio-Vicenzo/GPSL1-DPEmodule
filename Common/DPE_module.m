@@ -213,7 +213,7 @@ for j=1:length(activeChnList)
         % === Find the size of a "block" or code period in whole samples ==
         blksize = ceil((settings.codeLength-...
             trackResults(activeChnList(j)).remCodePhase(closestIndex)) ...
-            / codePhaseStep);
+            / codePhaseStep)*settings.DPE_cohInt;
 
         % === Read in the appropriate number of samples to process =======
         [rawSignal, ~] = fread(fid, ...
@@ -254,7 +254,8 @@ for j=1:length(activeChnList)
             ((blksize-1)*codePhaseStep + ...
             trackResults(activeChnList(j)).remCodePhase(closestIndex)-spacing);       
 
-            caCode1 = [caCode(end) caCode caCode(1)];
+            caCode1 = [caCode(end) repmat(caCode,1,settings.DPE_cohInt)...
+                      caCode(1)];
             tcodee = ceil(delay_index)+1;
             tcodee(tcodee==0)=tcodee(tcodee==0)+1;
 
