@@ -572,6 +572,8 @@ if settings.DPE_plotCorrelogram == 1
     % Save figure in MATLAB figure
     saveas(gcf, [pwd ,'\',settings.outfile_root,'\Correlogram\',...
      settings.outfile_root,'_Correlogram_Epoch',num2str(currMeasNr)]);
+
+    close all
 end
 
 % === Record DPE estimates ================================================
@@ -590,7 +592,6 @@ navSolutions.DPE_height(currMeasNr) =  ...
 navSolutions.DPE_clkBias(currMeasNr) = ...
     temprecord_DPE_values(barisan_yangmanaya,5);
 
-close all
 end
 
 
