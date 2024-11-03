@@ -270,7 +270,7 @@ for j=1:length(activeChnList)
               trackResults(activeChnList(j)).PRN;
           precalc_correlations(count,2) = ...
               (localTime-transmitTime(j))*settings.c ...
-              + (spacing/1.023e6) * settings.c;
+              + (spacing/settings.codeFreqBasis) * settings.c;
           precalc_correlations(count,count2) = sqrt(I.^2 + Q.^2);
 
           count=count+1;
