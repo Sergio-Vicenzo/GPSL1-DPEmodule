@@ -265,7 +265,7 @@ for j=1:length(activeChnList)
             I = sum(s  .* iBasebandSignal);
             Q = sum(s  .* qBasebandSignal);
            
-        % === Store the correlations and its corresponding code phase =====
+        % === Store the correlations and its corresponding code delay =====
           precalc_correlations(count,1) = ...
               trackResults(activeChnList(j)).PRN;
           precalc_correlations(count,2) = ...
