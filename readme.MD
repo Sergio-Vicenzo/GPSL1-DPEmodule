@@ -64,10 +64,6 @@ All the datasets were collected in a static urban scenario at The Hong Kong Poly
 
 ![LABSAT data collection site](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/Collection%20Site.jpg)
 
-The skymask for the datasets is shown below, with satellites marked green either line-of-sight (LOS) or multipath (MP) and satellites marked red are non-line-of-sight (NLOS).
-
-![Skymask](https://github.com/Sergio-Vicenzo/GPSL1-DPEmodule/blob/main/Skymask.jpg)
-
 The datasets have the following configuration.
 
 `FRONT-END EQUIPMENT`		: LABSAT 3 Wideband
