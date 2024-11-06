@@ -44,6 +44,8 @@ All DPE_module v1.0 parameters can be edited from `initSettings.m`, which are li
 
 5. `settings.DPE_nonCohInt` = DPE non-coherent integration time (Default = 1 ms) to improve the performance of DPE as the satellite correlations would be more filtered
 
+6. `settings.DPE_CohInt` = DPE coherent integration time (Default = 1 ms) to improve the performance of DPE against MP
+
 6. `settings.DPE_plotCorrelogram` = Output the correlograms, plotted at the estimated DPE height
 
 7. `settings.gt_llh` = Ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP
