@@ -197,11 +197,11 @@ for j=1:length(activeChnList)
         if strcmp(settings.dataType,'int16') 
             fseek(fid, ...
                 settings.fileType*...
-                ((trackResults(activeChnList(j)).absoluteSample(closestIndex)-1)*2),'bof');
+                ((trackResults(activeChnList(j)).absoluteSample(closestIndex))*2),'bof');
         else
             fseek(fid, ...
                 settings.fileType*...
-                (trackResults(activeChnList(j)).absoluteSample(closestIndex)-1),'bof');
+                (trackResults(activeChnList(j)).absoluteSample(closestIndex)),'bof');
         end
 
         % === Update the phasestep based on code freq (variable) and ======
