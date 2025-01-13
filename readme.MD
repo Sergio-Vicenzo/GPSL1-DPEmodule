@@ -25,7 +25,7 @@ Instead of iteratively computing the signal correlations per every candidate pos
 
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module to be integrated into it. 
 
-## MMT-DPE
+## MMT-DPE for Improved Urban Positioning with DPE
 Though DPE has been proven to be robust against MP, previous research has proved that its superior performance against two-step positioning (2SP) typically falters in deep urban environments where multipath (MP) and non-line-of-sight (NLOS) are the majority of signals received (Vicenzo et al. 2023). This does not necessarily mean that the performance of DPE is worse than 2SP, but rather that its performance is depreciated to a large degree with increasing errors from MP and NLOS the same way 2SP does.
 
 To solve this issue for DPE, we also introduce a Multipath Mitigation Technology (MMT)-integrated DPE, nicknamed MMT-DPE. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill 2002). An MMT-DPE would incorporate the cost function of MMT into DPE. In essence, both DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing DPE cost function with that of MMT would virtually mean that the MP component is incorporated into DPE signal model. 
