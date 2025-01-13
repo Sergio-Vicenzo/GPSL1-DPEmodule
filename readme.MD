@@ -10,9 +10,9 @@ More information can be found in the file `Sergio - ION GNSS+2024 PPT.pdf` as we
 
 [Multipath Mitigation Technology-integrated GNSS Direct Position Estimation Plug-in Module](https://www.researchgate.net/publication/386013941_Multipath_Mitigation_Technology-integrated_GNSS_Direct_Position_Estimation_Plug-in_Module)
 
-## Introduction
+# Introduction
 
-# Direct Position Estimation
+## Direct Position Estimation
 DPE_module v1.0 is a Direct Position Estimation (DPE) plug-in module that can be integrated into existing two-step positioning (2SP) MATLAB SDRs. 2SP information, namely tracking code phase, signal transmission time, receiver local time, satellite position from Least Squares, satellite clock bias, and Least Squares position solution, are used as input for the plug-in module. 
 
 Programmed in a user-friendly language, MATLAB, DPE_module v1.0 is aimed for better understanding and familiarity of a practical implementation of DPE. In this repository, DPE_module v1.0 is integrated into the SoftGNSS MATLAB GPS L1 C/A 2SP SDR from Borre et al. (2007), which is based on Scalar Tracking Loop (STL). But integration of DPE_module v1.0 is not restricted to an STL-based receiver and can be integrated with other 2SP architectures, such as Vector Tracking Loop (VTL). Additionally, the GNSS constellation is not restricted to GPS L1 C/A, but is also integrable with SDRs working with other BPSK-modulated GNSS signals. 
@@ -25,7 +25,7 @@ Instead of iteratively computing the signal correlations per every candidate pos
 
 Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module v1.0 to be integrated into it. 
 
-# MMT-DPE
+## MMT-DPE
 Though DPE has been proven to be robust against MP, previous research has proved that its superior performance against two-step positioning (2SP) typically falters in deep urban environments where multipath (MP) and non-line-of-sight (NLOS) are the majority of signals received (Vicenzo et al. 2023). This does not necessarily mean that the performance of DPE is worse than 2SP, but rather that its performance is depreciated to a large degree with increasing errors from MP and NLOS the same way 2SP does.
 
 To solve this issue for DPE, we also introduce a Multipath Mitigation Technology (MMT)-integrated DPE, nicknamed MMT-DPE. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill 2002). An MMT-DPE would incorporate the cost function of MMT into DPE. In essence, both DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing DPE cost function with that of MMT would virtually mean that the MP component is incorporated into DPE signal model. 
@@ -37,7 +37,7 @@ When running with 16-bit data samples, use `int16` in `settings.dataType` (inste
 
 Further information on using the software can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
 
-## DPE_module configuration
+# DPE_module configuration
 All DPE_module v1.0 parameters can be edited from `initSettings.m`, which are listed below.
 
 1. `settings.candPVT_spacing` = Grid spacing for the latitude-longitude-height estimation (Default = 1 meter)
@@ -48,22 +48,26 @@ All DPE_module v1.0 parameters can be edited from `initSettings.m`, which are li
 
 4. `settings.DPE_clkBias_span` = Span of clock bias search space (Default = ±20 meters)
 
-5. `settings.DPE_nonCohInt` = DPE non-coherent integration time (Default = 1 ms) to improve the performance of DPE as the satellite correlations would be more filtered
+5. `settings.DPE_nonCohInt` = DPE non-coherent integration time (Default = 1) to improve the performance of DPE as the satellite correlations would be more filtered
 
-6. `settings.DPE_CohInt` = DPE coherent integration time (Default = 1 ms) to improve the performance of DPE against MP
+6. `settings.DPE_CohInt` = DPE coherent integration time (Default = 20 ms) to improve the performance of DPE against MP
 
-6. `settings.DPE_plotCorrelogram` = Output the correlograms, plotted at the estimated DPE height
+7. `settings.DPE_plotCorrelogram` = Output the correlograms, plotted at the estimated DPE height
 
-7. `settings.gt_llh` = Ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP
+8. `settings.gt_llh` = Ground truth coordinates in geodetic coordinates to output the positioning errors from both DPE and 2SP
 
-8. `settings.chipspacing_dpe_precalc` = Chip spacings between the pre-calculated correlations (Default = chips/sample)
+9. `settings.chipspacing_dpe_precalc` = Chip spacings between the pre-calculated correlations (Default = chips/sample)
 
-## Dependencies
-DPE_module v1.0 was developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
+10. `settings.MMT` = 1 (Activate MMT-integrated DPE and 2SP) or 0 (Perform conventional DPE and 2SP)
+
+11. `settings.MMT_const ` = Relative amplitude constraint for MMT (Default = 0.8)
+
+# Dependencies
+`MMT_Sergio.m` and `DPE_module v1.0` were developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
 
 Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
-## Sample IF datasets
+# Sample IF datasets
 Sample GPS L1 C/A intermediate frequency (IF) datasets can be accessed through the following link
 
 [Sample IF datasets](https://drive.google.com/drive/folders/12i75AUCq3DoXqF6xqQ88tibIY3eSlucN?usp=sharing)
@@ -92,20 +96,20 @@ The datasets have the following configuration.
 
 For datasets used in the manuscript [Multipath Mitigation Technology-integrated GNSS Direct Position Estimation Plug-in Module](https://doi.org/10.48550/arXiv.2411.13339), please refer to the folder `MMT Manuscript Dataset`.
 
-## Author
+# Author
 
-DPE_module v1.0 was written by Sergio Vicenzo, inspired by the multicorrelator-based DPE (Corr-DPE) written by HaoSheng Xu and Dr. Bing Xu, which was previously introduced in (Vicenzo et al. 2023).
+`MMT_Sergio` and `DPE_module` were written by Sergio Vicenzo, inspired by the multicorrelator-based DPE (Corr-DPE) written by HaoSheng Xu and Dr. Bing Xu, which was previously introduced in (Vicenzo et al. 2023).
 
 Sergio Vicenzo is currently a PhD candidate at the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University. He received first-class honours in Bachelor of Engineering in Aviation Engineering from the same university in 2022. He is supervised by Assistant Professor Bing Xu, and co-supervised by Associate Professor Li-Ta Hsu. His research interests include GNSS urban navigation and positioning with direct position estimation.
 
 Email: <seergio.vicenzo@connect.polyu.hk>
 
-## Disclaimer
+# Disclaimer
 I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Kai Borre and Prof. Dennis M. Akos and the `llh2xyz.m` script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license has been kept intact in each code file, in accordance to GNU General Public License. No changes were made to the `llh2xyz.m` script and its copyright statement is kept intact.
 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
-## References
+# References
 Axelrad P, Donna J, Mitchell M (2009) Enhancing GNSS acquisition by combining signals from multiple channels and satellites. In: Proc. ION GNSS 2009, Institute of Navigation, Savannah, Georgia, USA, September 22 – 25, 3117-3128
 
 Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach](https://link.springer.com/book/10.1007/978-0-8176-4540-3). Birkhäuser, Boston, Massachusetts.
