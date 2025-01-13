@@ -94,7 +94,7 @@ The datasets have the following configuration.
 
 `FILE LENGTH`			: 240,000 ms 				(settings.msToProcess = 240000)
 
-For datasets used in the manuscript [Multipath Mitigation Technology-integrated GNSS Direct Position Estimation Plug-in Module](https://doi.org/10.48550/arXiv.2411.13339), please refer to the folder `MMT Manuscript Dataset` at [Sample IF datasets](https://drive.google.com/drive/folders/12i75AUCq3DoXqF6xqQ88tibIY3eSlucN?usp=sharing).
+For datasets used in the manuscript [Multipath Mitigation Technology-integrated GNSS Direct Position Estimation Plug-in Module](https://www.researchgate.net/publication/386013941_Multipath_Mitigation_Technology-integrated_GNSS_Direct_Position_Estimation_Plug-in_Module), please refer to the folder `MMT Manuscript Dataset` at [Sample IF datasets](https://drive.google.com/drive/folders/12i75AUCq3DoXqF6xqQ88tibIY3eSlucN?usp=sharing).
 
 # Author
 
