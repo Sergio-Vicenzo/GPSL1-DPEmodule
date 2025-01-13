@@ -312,6 +312,6 @@ for iter=iterations
     % Narrow the grid spacing (resolution) by half
     spacing=spacing/2;
 
-end
+end % end for iter
 
 end
