@@ -58,7 +58,7 @@ All DPE_module parameters can be edited from `initSettings.m`, which are listed 
 
 9. `settings.chipspacing_dpe_precalc` = Chip spacings between the pre-calculated correlations (Default = chips/sample)
 
-10. `settings.MMT` = 1 (Activate MMT-integrated DPE and 2SP) or 0 (Perform conventional DPE and 2SP)
+10. `settings.MMT` = 1 (Activate MMT-DPE and MMT-2SP) or 0 (Perform conventional DPE and 2SP)
 
 11. `settings.MMT_const ` = Relative amplitude constraint for MMT (Default = 0.8)
 
