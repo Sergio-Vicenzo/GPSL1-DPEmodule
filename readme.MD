@@ -30,6 +30,8 @@ Though DPE has been proven to be robust against MP, previous research has proved
 
 To solve this issue for DPE, we also introduce a Multipath Mitigation Technology (MMT)-integrated DPE, nicknamed MMT-DPE. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill 2002). An MMT-DPE would incorporate the cost function of MMT into DPE. In essence, both DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing DPE cost function with that of MMT would virtually mean that the MP component is incorporated into DPE signal model. 
 
+Parts of SoftGNSS v3.0 have been adapted to employ the MMT-DPE algorithm. 
+
 # Running the software
 The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module, and using it follows the same steps as running a regular SoftGNSS v3.0. Modifications were made to SoftGNSS v3.0 to also run on 16-bit samples (`int16` or `short` data types). 
 
