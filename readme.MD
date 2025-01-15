@@ -52,7 +52,7 @@ All DPE_module parameters can be edited from `initSettings.m`, which are listed 
 
 5. `settings.DPE_nonCohInt` = DPE non-coherent integration time (Default = 1) to improve the performance of DPE as the satellite correlations would be more filtered
 
-6. `settings.DPE_CohInt` = DPE coherent integration time (Default = 20 ms) to improve the performance of DPE against MP
+6. `settings.DPE_CohInt` = DPE coherent integration time (Default = 20 ms) to improve the performance of DPE and 2SP against MP. It is highly recommended to use 20 ms for MMT-DPE.
 
 7. `settings.DPE_plotCorrelogram` = Output the correlograms, plotted at the estimated DPE height
 
