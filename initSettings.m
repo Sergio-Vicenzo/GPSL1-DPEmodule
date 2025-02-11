@@ -41,8 +41,8 @@ function settings = initSettings()
 % Number of milliseconds to be processed used 36000 + any transients (see
 % below - in Nav parameters) to ensure nav subframes are provided
 
-% Leave around 200 to 300 milliseconds of spare data length
-% i.e., deduct the actual full length by 200 or 300 ms
+% Leave around 2000 to 3000 milliseconds of spare data length
+% i.e., deduct the actual full length by 2000 or 3000 ms
 % This is necessary for locating bit transition in tracking.m
 settings.msToProcess        = 110000;        %[ms]
 
