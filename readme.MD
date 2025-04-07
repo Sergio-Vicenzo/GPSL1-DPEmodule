@@ -23,14 +23,14 @@ DPE_module would use the grid-based method, by which of establishing a set of ca
 
 Instead of iteratively computing the signal correlations per every candidate position, our DPE plug-in module pre-calculates the correlations per every pre-determined chip spacing or code phase. This implementation was previously used by previous research on collective detection, which is another name for DPE, to save computational time (Axelrad et al., 2009; Cheong et al., 2011). 
 
-Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module to be integrated into it. 
+Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module to be integrated into it. `tracking.m` has been updated to use larger coherent integration times (> 1 ms, set by default at 20 ms) for both DPE and 2SP STL.
 
 ## MMT-DPE for Improved Urban Positioning with DPE
 Though DPE has been proven to be robust against MP, previous research has proved that its superior performance against two-step positioning (2SP) typically falters in deep urban environments where multipath (MP) and non-line-of-sight (NLOS) are the majority of signals received (Vicenzo et al. 2023). This does not necessarily mean that the performance of DPE is worse than 2SP, but rather that its performance is depreciated to a large degree with increasing errors from MP and NLOS the same way 2SP does.
 
 To solve this issue for DPE, we also introduce a Multipath Mitigation Technology (MMT)-integrated DPE, nicknamed MMT-DPE. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill 2002). An MMT-DPE would incorporate the cost function of MMT into DPE. In essence, both DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing DPE cost function with that of MMT would virtually mean that the MP component is incorporated into DPE signal model. 
 
-Parts of SoftGNSS v3.0 have been adapted to employ the MMT-DPE algorithm. 
+Parts of SoftGNSS v3.0 have been adapted to employ the MMT-DPE algorithm. More specifically, `tracking_MMT.m` is adapted from `tracking.m` to incorporate MMT into the tracking loops.
 
 # Running the software
 The software presented in this repository is a SoftGNSS v3.0 that has been integrated with DPE_Module, and using it follows the same steps as running a regular SoftGNSS v3.0. Modifications were made to SoftGNSS v3.0 to also run on 16-bit samples (`int16` or `short` data types). 
