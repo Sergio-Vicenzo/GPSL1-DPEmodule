@@ -72,7 +72,7 @@ function [MMT_cost_func3,store_a,store_a3,store_b,store_b3,store_c,store_c3,...
 % Last Updated: 13 Jan 2025
 
 %% === Generate multi-correlator values ===================================
-chip_spacings = [-(flip(0.1:0.1:0.4)),0,0.1:0,0.1:0.4];
+chip_spacings = [-(flip(0.1:0.1:0.4)),0,0.1:0.1:0.4];
 
 count = 1;
 precalc_correlations    = ...
