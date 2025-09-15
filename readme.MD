@@ -6,7 +6,7 @@ An open-source GNSS Direct Position Estimation (DPE) and a Multipath Mitigation 
 The Hong Kong Polytechnic University
 
 ## Related Publication
-More information can be found in the file `Sergio - ION GNSS+2024 PPT.pdf` as well as the following manuscript
+More information can be found in the file `ION GNSS+2025 PPT - SERGIO VICENZO.pdf` as well as the following manuscript
 
 [Multipath Mitigation Technology-integrated GNSS Direct Position Estimation Plug-in Module](https://www.researchgate.net/publication/386013941_Multipath_Mitigation_Technology-integrated_GNSS_Direct_Position_Estimation_Plug-in_Module)
 
@@ -132,3 +132,4 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 13 January 2025
 
 	   
+
