@@ -44,6 +44,8 @@ When running with 16-bit data samples, use `int16` in `settings.dataType` (inste
 
 Further information on using the software can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
 
+NOTE: DPE_GPSL1 (Conventional DPE) is only configured to run on zero (0) Hertz intermediate frequency (IF) datasets. Modifications are required to run non-zero IF data.
+
 # Configurations
 All the parameters can be edited from `initSettings.m`, which are listed below.
 
@@ -100,6 +102,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
