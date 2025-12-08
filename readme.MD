@@ -30,14 +30,14 @@ For CorrDPE_MMT_GPSL1
 
 [Open-Source Multipath Mitigation Technology-Integrated GNSS Direct Position Estimation](https://www.ion.org/publications/abstract.cfm?articleID=20441)
 
-# Running the software
+## Running the software
 The algorithms presented in this repository are built upon SoftGNSS v3.0, and using them follows the same steps as running a regular SoftGNSS v3.0. Modifications were made to SoftGNSS v3.0 to also run on 16-bit samples (`int16` or `short` data types). 
 
 When running with 16-bit data samples, use `int16` in `settings.dataType` (instead of `short`). On the other hand, use `schar` in `settings.dataType` (instead of `int8`) when running with 8-bit data samples.
 
 Further information on using the software can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
 
-# Configurations
+## Configurations
 All the parameters can be edited from `initSettings.m`, which are listed below.
 
 1. `settings.candPVT_spacing` = Grid spacing for the latitude-longitude-height estimation (Default = 1 meter)
@@ -62,12 +62,12 @@ All the parameters can be edited from `initSettings.m`, which are listed below.
 
 11. `settings.MMT_const ` = Relative amplitude constraint for MMT (Default = 0.8)
 
-# Dependencies
+## Dependencies
 All the algorithms were developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
 
 Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
-# Author
+## Author
 
 The algorithms introduced here were written by Sergio Vicenzo.
 
@@ -75,12 +75,12 @@ Sergio Vicenzo is currently a PhD candidate at the Department of Aeronautical an
 
 Email: <seergio.vicenzo@connect.polyu.hk>
 
-# Disclaimer
+## Disclaimer
 I, Sergio Vicenzo, hereby do not claim ownership nor any responsibility for the SoftGNSS v3.0 software by Prof. Kai Borre and Prof. Dennis M. Akos and the `llh2xyz.m` script by Prof. Todd Walter. All changes made to the SoftGNSS v3.0 software have been labelled appropriately and its GNU license has been kept intact in each code file, in accordance to GNU General Public License. No changes were made to the `llh2xyz.m` script and its copyright statement is kept intact.
 
 No copyright infringement is intended from any of the MATLAB scripts provided in this GitHub repository.
 
-# References
+## References
 Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GPS and Galileo Receiver: A Single-Frequency Approach](https://link.springer.com/book/10.1007/978-0-8176-4540-3). Birkhäuser, Boston, Massachusetts.
 
 Weill LR (2002) Multipath Mitigation using Modernized GPS Signals: How Good Can it Get?. In: Proc. ION GPS 2002, Institute of Navigation, Portland, Oregon, USA, September 24 - 27, 493 - 505.
@@ -95,6 +95,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
