@@ -1,9 +1,6 @@
-# DPE_module
 [PNT Signal Processing Group](https://pbingxu.github.io/team/)
 
 The Hong Kong Polytechnic University
-
-# Introduction
 
 ## Direct Position Estimation Plug-in Modules
 
@@ -102,6 +99,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
