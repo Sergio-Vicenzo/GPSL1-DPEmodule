@@ -4,11 +4,11 @@ This repository has three algorithms:
 
 1. Conventional Direct Position Estimation (DPE) in `DPE_GPSL1`
 
-In DPE, the objective function aims to find the PVT with the code delay and Doppler frequency that fits the best with that of the received signal. This way, the receiver PVT is directly the parameters to be estimated. Hence, PVT is estimated in a “single step” in DPE, and no estimation of code delays and Doppler frequencies is required.
+In DPE, the objective function aims to find the PVT with the code delay and Doppler frequency that fits the best with that of the received signal. This way, the receiver PVT is directly the parameters to be estimated. Hence, PVT is estimated in a “single step” in DPE, and no estimation of code delays and Doppler frequencies is required. Accelerated Random Search (ARS) is used to accelerate DPE PVT computation.
 
 2. Corr-DPE, a low-complexity alternative to DPE in `CorrDPE_GPSL1`
 
-Corr-DPE aims to act as a viable low complexity alternative to DPE by using the multicorrelator values from two-step positioning (2SP) to save the computational cost of the correlation operation in DPE. Instead of computing the correlations for every candidate position, velocity, and time (PVT) candidates, the values are interpolated from the tracking multicorrelators. Since the maximum code delay tracking error from MP in 2SP tracking is essentially half of the Early-Late spacing, the multicorrelators for Corr-DPE need only to be computed between the Early and Late correlators. To further accelerate Corr-DPE computation, Accelerated Random Search (ARS) was also used to obtain the PVT based on the interpolated multicorrelator values.
+Corr-DPE aims to act as a viable low complexity alternative to DPE by using the multicorrelator values from two-step positioning (2SP) to save the computational cost of the correlation operation in DPE. Instead of computing the correlations for every candidate position, velocity, and time (PVT) candidates, the values are interpolated from the tracking multicorrelators. Since the maximum code delay tracking error from MP in 2SP tracking is essentially half of the Early-Late spacing, the multicorrelators for Corr-DPE need only to be computed between the Early and Late correlators. To further accelerate Corr-DPE computation, ARS was also used to obtain the PVT based on the interpolated multicorrelator values.
 
 3. MMT-integrated Corr-DPE, an upgraded Corr-DPE which uses Multipath Mitigation Technology (MMT) to compensate for Multipath (MP) reception in `CorrDPE_MMT_GPSL1`
 
@@ -95,6 +95,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
