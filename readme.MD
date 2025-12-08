@@ -1,5 +1,5 @@
 # DPE_module
-[Intelligent Positioning and Navigation Laboratory (IPNL)](https://www.polyu.edu.hk/aae/ipn-lab/us/index.html) / [PNT Signal Processing Group](https://pbingxu.github.io/team/)
+[PNT Signal Processing Group](https://pbingxu.github.io/team/)
 
 The Hong Kong Polytechnic University
 
@@ -43,8 +43,6 @@ The algorithms presented in this repository are built upon SoftGNSS v3.0, and us
 When running with 16-bit data samples, use `int16` in `settings.dataType` (instead of `short`). On the other hand, use `schar` in `settings.dataType` (instead of `int8`) when running with 8-bit data samples.
 
 Further information on using the software can be found in the original SoftGNSS v3.0 readme `readme - SoftGNSS.txt` and ppt `GPS_L1_CA_SDR.pdf`.
-
-NOTE: DPE_GPSL1 (Conventional DPE) is only configured to run on zero (0) Hertz intermediate frequency (IF) datasets. Modifications are required to run non-zero IF data.
 
 # Configurations
 All the parameters can be edited from `initSettings.m`, which are listed below.
@@ -95,6 +93,8 @@ Borre K, Akos DM, Bertelsen N, Rinder P, Jensen SH (2007) [A Software-Defined GP
 Weill LR (2002) Multipath Mitigation using Modernized GPS Signals: How Good Can it Get?. In: Proc. ION GPS 2002, Institute of Navigation, Portland, Oregon, USA, September 24 - 27, 493 - 505.
 
 ## Note
+DPE_GPSL1 (Conventional DPE) is only configured to run on zero (0) Hertz intermediate frequency (IF) datasets. Modifications are required to run non-zero IF data.
+
 This repository is still under development. I apologise if some information is incomplete or if you encounter any problems...
 
 If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
@@ -102,6 +102,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
