@@ -58,7 +58,7 @@ All the parameters can be edited from `initSettings.m`, which are listed below.
 
 9. `settings.chipspacing_dpe_precalc` = Chip spacings between the pre-calculated correlations (Default = chips/sample)
 
-10. `settings.MMT` = 1 (Activate MMT-DPE and MMT-2SP) or 0 (Perform conventional DPE and 2SP) - Note that for DPE_GPSL1 (Conventional DPE), MMT tracking is the default setting.
+10. `settings.MMT` = 1 (Activate MMT-DPE and MMT-2SP) or 0 (Perform conventional DPE and 2SP) in CorrDPE_MMT_GPSL1 - Note that for DPE_GPSL1 (Conventional DPE), MMT tracking is the default setting. 
 
 11. `settings.MMT_const` = Relative amplitude constraint for MMT (Default = 0.8)
 
@@ -97,6 +97,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
