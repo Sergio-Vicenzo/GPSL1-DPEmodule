@@ -366,11 +366,11 @@ for channelNr = 1:settings.numberOfChannels
             % Check for bit transition --------------------------------------------
             % Locate bit transition after 2000 ms of tracking with PDI = 1
             % ms
-            % 2000 ms was chosen arbitrarily based on observation that the
+            % 200 ms was chosen arbitrarily based on observation that the
             % tracking loop has stabilised
             % Added by Sergio Vicenzo - 06 Jan 2025
             %
-            if loopCnt > 2000 && ...
+            if loopCnt > 200 && ...
                     sign(I_P)~=sign(trackResults(channelNr).I_P(loopCnt-1))
 
                 newStart=loopCnt;
@@ -669,3 +669,4 @@ end % for channelNr
 
 % Close the waitbar
 close(hwb)
+
