@@ -24,11 +24,11 @@ Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module to be integrate
 
 ## Related Publications
 
-For DPE_GPSL1 and CorrDPE_GPSL1
+For `DPE_GPSL1` and `CorrDPE_GPSL1`
 
 [GNSS Positioning with Multicorrelators as an Alternative to Direct Position Estimation: How Good Can It Get?](https://www.ion.org/pnt/abstracts.cfm?paperID=16451)
 
-For CorrDPE_MMT_GPSL1
+For `CorrDPE_MMT_GPSL1`
 
 [Open-Source Multipath Mitigation Technology-Integrated GNSS Direct Position Estimation](https://www.ion.org/publications/abstract.cfm?articleID=20441)
 
@@ -99,6 +99,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
