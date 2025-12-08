@@ -70,7 +70,7 @@ All the parameters can be edited from `initSettings.m`, which are listed below.
 11. `settings.MMT_const ` = Relative amplitude constraint for MMT (Default = 0.8)
 
 # Dependencies
-`MMT_Sergio.m` and `DPE_module` were developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
+All the algorithms were developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
 
 Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
@@ -100,6 +100,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
