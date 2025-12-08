@@ -12,7 +12,7 @@ Corr-DPE aims to act as a viable low complexity alternative to DPE by using the 
 
 3. MMT-integrated Corr-DPE, an upgraded Corr-DPE which uses Multipath Mitigation Technology (MMT) to compensate for Multipath (MP) reception in `CorrDPE_MMT_GPSL1`
 
-Improving the performance of Corr-DPE, the multicorrelators for Corr-DPE are compensated for MP reception by using the MP parameters estimated by MMT. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill, 2002). An MMT-DPE would incorporate the cost function of MMT into Corr-DPE / DPE. In essence, both Corr-DPE / DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing Corr-DPE / DPE cost function with that of MMT would virtually mean that the MP component is incorporated into Corr-DPE / DPE signal model. To save computational load, the multicorrelators are computed on the positioning side instead of tracking side like in Corr-DPE.
+Improving the performance of Corr-DPE, the multicorrelators for Corr-DPE are compensated for MP reception by using the MP parameters estimated by MMT, nicknamed MMT-DPE. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill, 2002). An MMT-DPE would incorporate the cost function of MMT into Corr-DPE / DPE. In essence, both Corr-DPE / DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing Corr-DPE / DPE cost function with that of MMT would virtually mean that the MP component is incorporated into Corr-DPE / DPE signal model. To save computational load, the multicorrelators are computed on the positioning side instead of tracking side like in Corr-DPE.
 
 All the above algorithms are provided in a plug-in module form that can be easily integrated into existing 2SP MATLAB SDRs. Following 2SP, ephemerides are decoded through conventional 2SP tracking to obtain satellite position, velocity, clock bias, and clock drift.
 
@@ -60,10 +60,12 @@ All the parameters can be edited from `initSettings.m`, which are listed below.
 
 10. `settings.MMT` = 1 (Activate MMT-DPE and MMT-2SP) or 0 (Perform conventional DPE and 2SP) - Note that for DPE_GPSL1 (Conventional DPE), MMT tracking is the default setting.
 
-11. `settings.MMT_const ` = Relative amplitude constraint for MMT (Default = 0.8)
+11. `settings.MMT_const` = Relative amplitude constraint for MMT (Default = 0.8)
+
+12. `settings.useIonoCorr` = Ionospheric corrections for both 2SP and DPE / Corr-DPE / MMT-DPE (Default = 0, only use when the ionospheric Klobuchar alpha and beta parameters are available)
 
 ## Dependencies
-All the algorithms were developed with MATLAB2022a and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
+All the algorithms were developed with MATLAB2025b and it is recommended to run the program with the same version or later. Running the program with other MATLAB versions has yet to be tested. No additional MATLAB toolbox is required i.e., it can run with just the basic MATLAB package and no additional toolboxes.
 
 Dependencies of the underlying SoftGNSS v3.0 can be found in its readme file `readme - SoftGNSS.txt`
 
@@ -95,6 +97,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
