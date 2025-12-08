@@ -1,0 +1,133 @@
+% CKF_GNSS  Sample Cubature Kalman Filter for GNSS Positioning (ECEF).
+% ------------------------------------------------------------------------
+%  [xEst, PEvol, xHist] = ckf_gnss(prMat, satPosMat, dt, Q, R, x0, P0)
+%
+%  INPUTS
+%   prMat     : m x k matrix of pseudoranges (m sats, k epochs) [m]
+%   satPosMat : m x 3 x k array of satellite ECEF positions [m]
+%   dt        : scalar time‑step [s] (assumed constant)
+%   Q         : 8x8 process‑noise covariance for constant‑velocity clock model
+%   R         : m x m measurement‑noise covariance (diagonal σ_ρ²)
+%   x0        : 8×1 initial state [x y z vx vy vz cb cd]ᵀ
+%   P0        : 8×8 initial state covariance
+%
+%  OUTPUTS
+%   xEst   : 8×1 final state estimate at epoch k
+%   PEvol  : 8×8×k covariance evolution
+%   xHist  : 8×k state history
+%
+%  State vector        Dynamics              Units
+%  ------------------------------------------------
+%  1‑3  x,y,z          x = x + v*dt          [m]
+%  4‑6  vx,vy,vz       v = v                  [m/s]
+%  7    cb (clock bias) cb = cb + cd*dt      [m]
+%  8    cd (clock drift)cd = cd              [m/s]
+%
+%  Author: ChatGPT o3, June 2025
+% ------------------------------------------------------------------------
+
+m        = 8;                             % satellites
+kTot     = 100;                          % epochs
+dt       = 1;                            % 1 Hz
+satPosMat= randn(m,3,kTot)*2.7e7;        % fake satellite XYZ [m]
+trueX    = [0;0;0;0;0;0;0;0];            % stationary at ECEF origin
+prTrue   = squeeze(vecnorm(satPosMat - trueX(1:3).',2,2)) + trueX(7);
+prNoise  = 3;                            % 3 m σ
+prMat    = prTrue + prNoise*randn(m,kTot);
+Q        = diag([0.01*ones(1,3), 0.001*ones(1,3), 1, 0.01]);
+R        = prNoise^2*eye(m);
+x0       = [1e6;1e6;1e6; 0;0;0; 100; 0];
+P0       = diag([1e6*ones(1,3), 10*ones(1,3), 1e4, 1e2]);
+[~,~,xHist] = ckf_gnss(prMat, satPosMat, dt, Q, R, x0, P0);
+figure;plot3(xHist(1,:),xHist(2,:),xHist(3,:)); grid on;
+
+function [xEst, PEvol, xHist] = ckf_gnss(prMat, satPosMat, dt, Q, R, x0, P0)
+
+% ---------------- Constants ----------------
+c = 299792458;  % speed of light [m/s]
+[nSat, kTot] = size(prMat);
+stateDim = 8; % dimension n
+sqrtW = sqrt(stateDim);  % cubature scaling factor √n
+
+% ------------- Pre‑allocate -----------------
+xHist = zeros(stateDim, kTot);
+PEvol = zeros(stateDim, stateDim, kTot);
+
+% --------- System matrices (CV) ------------
+F = eye(stateDim);
+F(1:3,4:6) = dt*eye(3); % position update
+F(7,8) = dt; % clock bias update
+
+% ---------- Initialise filter --------------
+xHat = x0(:);
+P   = P0;
+
+for k = 1:kTot
+    % ================= Prediction Step =================
+    xPred = F*xHat;                     % deterministic CV model
+    PPred = F*P*F' + Q;                 % add process noise
+
+    % ========== Generate cubature points ==============
+    S = chol(PPred,'lower');            % Cholesky (P = SSᵀ)
+    Xi = [sqrtW*S, -sqrtW*S] + xPred;   % 2n sigma‑points (8×16)
+
+    % ========== Measurement prediction ================
+    Zeta = zeros(nSat, 2*stateDim);
+    for i = 1:2*stateDim
+        Zeta(:,i) = h_range(Xi(:,i), satPosMat(:,:,k), c);
+    end
+    zPred = mean(Zeta,2);               % 1/(2n) weighting (implicit)
+
+    % Innovation & covariances
+    Szz = R; Cxz = zeros(stateDim, nSat);
+    for i = 1:2*stateDim
+        dz = Zeta(:,i) - zPred;
+        dx = Xi(:,i) - xPred;
+        Szz = Szz + (dz*dz.')/(2*stateDim);
+        Cxz = Cxz + (dx*dz.')/(2*stateDim);
+    end
+
+    % ============== Update Step =======================
+    K = Cxz / Szz;                       % Kalman gain
+    innov = prMat(:,k) - zPred;          % measurement innovation
+    xHat = xPred + K*innov;
+    P = PPred - K*Szz*K.';
+
+    % -------- Store history & covariance -------------
+    xHist(:,k) = xHat;
+    PEvol(:,:,k) = P;
+end
+
+xEst = xHat;
+end
+
+% -------------------------------------------------------------------------
+function rho = h_range(x, satPos, c)
+% h_range  Pseudorange measurement model.
+%   Inputs: x [8×1] state, satPos [m×3] satellite ECEF positions [m]
+%   Output: rho [m×1] predicted pseudoranges [m]
+    userPos = x(1:3).';                 % ECEF position
+    cb = x(7);                          % clock bias [m]
+    diff = satPos - userPos;            % m×3
+    rho = sqrt(sum(diff.^2,2)) + cb;    % geometric + clock
+end
+
+%==================== DEMO ==============================
+
+% Example usage (synthetic):
+ % m        = 8;                             % satellites
+ % kTot     = 100;                          % epochs
+ % dt       = 1;                            % 1 Hz
+ % satPosMat= randn(m,3,kTot)*2.7e7;        % fake satellite XYZ [m]
+ % trueX    = [0;0;0;0;0;0;0;0];            % stationary at ECEF origin
+ % prTrue   = squeeze(vecnorm(satPosMat - trueX(1:3).',2,2)) + trueX(7);
+ % prNoise  = 3;                            % 3 m σ
+ % prMat    = prTrue + prNoise*randn(m,kTot);
+ % Q        = diag([0.01*ones(1,3), 0.001*ones(1,3), 1, 0.01]);
+ % R        = prNoise^2*eye(m);
+ % x0       = [1e6;1e6;1e6; 0;0;0; 100; 0];
+ % P0       = diag([1e6*ones(1,3), 10*ones(1,3), 1e4, 1e2]);
+ % [~,~,xHist] = ckf_gnss(prMat, satPosMat, dt, Q, R, x0, P0);
+ % figure;plot3(xHist(1,:),xHist(2,:),xHist(3,:)); grid on;
+ 
+% ======================================================
