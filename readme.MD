@@ -14,7 +14,7 @@ Corr-DPE aims to act as a viable low complexity alternative to DPE by using the 
 
 Improving the performance of Corr-DPE, the multicorrelators for Corr-DPE are compensated for MP reception by using the MP parameters estimated by MMT, nicknamed MMT-DPE. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill, 2002). An MMT-DPE would incorporate the cost function of MMT into Corr-DPE / DPE. In essence, both Corr-DPE / DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing Corr-DPE / DPE cost function with that of MMT would virtually mean that the MP component is incorporated into Corr-DPE / DPE signal model. To save computational load, the multicorrelators are computed on the positioning side instead of tracking side like in Corr-DPE.
 
-###
+### 
 
 All the above algorithms are provided in a plug-in module form that can be easily integrated into existing 2SP MATLAB SDRs. Following 2SP, ephemerides are decoded through conventional 2SP tracking to obtain satellite position, velocity, clock bias, and clock drift.
 
@@ -99,6 +99,7 @@ If you have any questions, drop an email at <seergio.vicenzo@connect.polyu.hk>!
 Last Updated: 08 December 2025
 
 	   
+
 
 
 
