@@ -14,6 +14,9 @@ Corr-DPE aims to act as a viable low complexity alternative to DPE by using the 
 
 Improving the performance of Corr-DPE, the multicorrelators for Corr-DPE are compensated for MP reception by using the MP parameters estimated by MMT, nicknamed MMT-DPE. MMT was introduced as an efficient maximum likelihood estimator for accurate estimation of the code delays and carrier phase of the LOS and reflected signal (Weill, 2002). An MMT-DPE would incorporate the cost function of MMT into Corr-DPE / DPE. In essence, both Corr-DPE / DPE and MMT are the same maximum likelihood estimators that share similar cost functions, with the difference that in MMT, a reflected path is assumed to be received in addition to the LOS path. Replacing Corr-DPE / DPE cost function with that of MMT would virtually mean that the MP component is incorporated into Corr-DPE / DPE signal model. To save computational load, the multicorrelators are computed on the positioning side instead of tracking side like in Corr-DPE.
 
+### 4. Bayesian Direct Position Estimation in `BDPE_GPSL1`
+A Bayesian DPE (BDPE). Specifically, applies the standard Sequential Importance Resampling (SIR) Particle Filter (PF) for DPE. PFs are Sequential Monte-Carlo methods (SMC) that recursively estimate the posterior probability density function of the states of interest. Its method of estimating the state’s posterior with discrete random measures (known as particles) allows it to operate with non-Gaussian noises, which is commonly the case in urban scenarios due to MP and NLOS reception, and non-linear dynamical systems, which is the case for DPE’s non-convex cost function.
+
 ## 
 
 All the above algorithms are provided in a plug-in module form that can be easily integrated into existing 2SP MATLAB SDRs. Following 2SP, ephemerides are decoded through conventional 2SP tracking to obtain satellite position, velocity, clock bias, and clock drift.
@@ -26,11 +29,15 @@ Parts of SoftGNSS v3.0 have been adapted to allow the DPE_module to be integrate
 
 For `DPE_GPSL1` and `CorrDPE_GPSL1`
 
-[GNSS Positioning with Multicorrelators as an Alternative to Direct Position Estimation: How Good Can It Get?](https://www.ion.org/pnt/abstracts.cfm?paperID=16451)
+[GNSS Positioning with Multicorrelators as an Alternative to Direct Position Estimation: How Good Can It Get?](https://www.ion.org/publications/abstract.cfm?articleID=20632)
 
 For `CorrDPE_MMT_GPSL1`
 
 [Open-Source Multipath Mitigation Technology-Integrated GNSS Direct Position Estimation](https://www.ion.org/publications/abstract.cfm?articleID=20441)
+
+For `BDPE_GPSL1`
+
+[Bayesian Direct Position Estimation for GNSS Urban Positioning](https://www.ion.org/gnss/abstracts.cfm?paperID=16875)
 
 ## Running the software
 The algorithms presented in this repository are built upon SoftGNSS v3.0, and using them follows the same steps as running a regular SoftGNSS v3.0. Modifications were made to SoftGNSS v3.0 to also run on 16-bit samples (`int16` or `short` data types). 
